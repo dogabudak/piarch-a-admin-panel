@@ -17,11 +17,13 @@ export const Form= ()=> {
             'Content-Type': 'application/json'
           }})
           .then(res => {
+              // TODO This should give feedback to the user if it is successfull
               console.log(res);
               console.log(res.data);
           })
   };
 
+  // TODO This input types should have at least some form of validator
   return (
       <form onSubmit={handleSubmit(onSubmit)}>
         <input defaultValue="Name" {...register("name")} />
